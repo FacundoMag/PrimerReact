@@ -12,6 +12,13 @@ export default class Contador extends Component{
   sumar(){
     this.setState({valor: this.state.valor + 1})
   }
+  multiplicar(){
+    this.setState({valor: this.state.valor * 2})
+  }
+  dividir(){
+    this.setState({valor: this.state.valor / 2})
+  }
+  
   render(){
     return(
       <div className='Contador'>
@@ -25,6 +32,18 @@ export default class Contador extends Component{
           <Boton 
           simbolo='+'
           accion={() => this.sumar()}
+          />
+          <Boton
+          simbolo='x2'
+          accion={() => this.multiplicar()}
+          />
+          <Boton
+          simbolo='/2'
+          accion={() => this.dividir()}
+          />
+          <Boton 
+          simbolo='x'
+          accion={() => this.props.eliminar()}
           />
         </div>
       </div>
