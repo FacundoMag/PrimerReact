@@ -19,9 +19,6 @@ export default class App extends Component{
     this.setState({contadores: nuevosContadores});
   }
   eliminar(){
-    let nuevosContadores = this.state.contadores;
-    nuevosContadores.splice();
-    this.setState({contadores: nuevosContadores});
   }
 
   render(){
